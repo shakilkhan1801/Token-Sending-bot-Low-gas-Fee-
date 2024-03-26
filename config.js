@@ -1,6 +1,6 @@
 module.exports = {
     ETH_NODE_RPC_URL: 'https://rpc.katla.taiko.xyz',
-    SENDER_ADDRESS: '0xBa1347eAB403FAEd265E906634a6D5962D1E68DD',
+    SENDER_ADDRESS: '0xD',
     ABI: [
         {
             "inputs": [
