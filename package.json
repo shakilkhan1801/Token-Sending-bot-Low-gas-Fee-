@@ -1,4 +1,31 @@
 {
+  "name": "token-sending-bot",
+  "version": "1.0.0",
+  "description": "A low gas fee token sending bot for Ethereum tokens",
+  "main": "mint.js",
+  "scripts": {
+    "start": "node mint.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ethereum",
+    "token",
+    "erc20",
+    "gas-fee",
+    "blockchain",
+    "web3",
+    "cryptocurrency"
+  ],
+  "author": "Shakil Khan",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shakilkhan1801/Token-Sending-bot-Low-gas-Fee-.git"
+  },
+  "bugs": {
+    "url": "https://github.com/shakilkhan1801/Token-Sending-bot-Low-gas-Fee-/issues"
+  },
+  "homepage": "https://github.com/shakilkhan1801/Token-Sending-bot-Low-gas-Fee-#readme",
   "dependencies": {
     "dotenv": "^16.4.1",
     "web3": "^1.5.3"

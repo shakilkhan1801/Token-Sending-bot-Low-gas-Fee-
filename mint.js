@@ -1,20 +1,20 @@
 require('dotenv').config(); // Load environment variables
 const fs = require('fs');
 const Web3 = require('web3');
-const config = require('./config');
 const wallets = require('./wallets');
+const erc20Abi = require('./erc20Abi.json');
 
 // Initialize Web3 with your Ethereum node provider
-const web3 = new Web3(config.ETH_NODE_RPC_URL);
+const web3 = new Web3(process.env.ETH_NODE_RPC_URL || 'https://rpc.katla.taiko.xyz');
 
 // Set up your contract address and the account addresses
-const contractAddress = '0x33a64BA4e4Cb24af70d9Fefa6A0A0ca9fD69882E';
-const abiFound = config.ABI ? 'ABI found' : 'ABI not found';
+const contractAddress = process.env.CONTRACT_ADDRESS;
+const abiFound = erc20Abi ? 'ABI found' : 'ABI not found';
 console.log(abiFound); // Log if ABI is found or not
 console.log('Contract Address:', contractAddress); // Log contract address
-const tokenContract = new web3.eth.Contract(config.ABI, contractAddress);
+const tokenContract = new web3.eth.Contract(erc20Abi, contractAddress);
 
-const fromAddress = config.SENDER_ADDRESS; // The address sending the tokens
+const fromAddress = process.env.SENDER_ADDRESS; // The address sending the tokens
 
 // Load or create the file to store addresses that have received tokens
 const receivedAddressesFile = './received_addresses.json';
